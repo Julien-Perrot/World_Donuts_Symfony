@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} World DONUT {% endblock %}
+
+{% block body %}
+
+{% for donut in donuts %}
+
+<div>
+    <hr>
+        <p>Nom du donut : {{ donut.name }}</p>
+        <p>Garniture du donut : {{ donut.filling }}</p>
+        <p>Prix du donut : {{ donut.price }} €</p>
+        <p>Description du donut : {{ donut.description }}</p>
+        <br>
+        <a class="btn btn-primary" href="{{ path("un_donut", { id:donut.id } ) }}">Voir le donut</a>
+        <a class="btn btn-danger" href="{{ path("delete_donut", { id:donut.id } ) }}">Supprimer ce donut</a>
+    <hr>
+</div>
+
+{% endfor %}
+
+{% endblock %}

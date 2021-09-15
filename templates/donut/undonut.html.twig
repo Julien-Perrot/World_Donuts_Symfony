@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ donut.name }} {% endblock %}
+
+{% block body %}
+
+<div>
+    <hr>
+        <p>Nom du donut : {{ donut.name }}</p>
+        <p>Garniture du donut : {{ donut.filling }}</p>
+        <p>Prix du donut : {{ donut.price }} €</p>
+        <p>Description du donut : {{ donut.description }}</p>
+        <a href="{{ path("donut", { id:donut.id } ) }}">Retour à l'accueil</a>
+    <hr>
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Nouveau Donut {% endblock %}
+
+{% block body %}
+
+    <h2>Je suis le formulaire pour l'ajout d'un donut.</h2>
+
+    {{ form_start(formulaire) }}
+
+        {{ form_row(formulaire.name) }}
+        {{ form_row(formulaire.filling) }}
+        {{ form_row(formulaire.price) }}
+        {{ form_row(formulaire.description) }}
+
+        <button classe="btn btn-primary" type="submit">Envoyer</button>
+
+    {{ form_end(formulaire) }}
+    
+{% endblock %}
